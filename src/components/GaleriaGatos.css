@@ -1,0 +1,72 @@
+
+
+.cardsGatos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin: 25px;
+  justify-content: center;
+}
+
+.card-cat {
+  width: 100%;
+  border-radius: 8px;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+}
+
+.textoGatos {
+  background-color: rgba(61, 174, 219, 0.603);
+  margin: 5px;
+  padding: 8px;
+  border-radius: 8px;
+  margin-top: 15px;
+  height: auto;
+  overflow: visible;
+}
+
+.textoGatos h3 {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.pG {
+  font-size: 15px;
+  font-weight: 400;
+  height: auto;
+  overflow: visible;
+}
+
+
+@media (min-width: 640px) {
+  .cardsGatos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .cardsGatos {
+    grid-template-columns: repeat(2, 480px);
+    gap: 20px;
+  }
+
+  .textoGatos h3 {
+    font-size: 1.5rem;
+  }
+
+  .pG {
+    font-size: 20px;
+  }
+}
+
+
+@media (min-width: 2540px) {
+  .cardsGatos {
+    grid-template-columns: repeat(2, 750px);
+    grid-template-rows: auto;
+  }
+}

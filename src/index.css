@@ -1,0 +1,65 @@
+@import "tailwindcss";
+/*É onde você declara as variáveis CSS (como --text, --bg, --sans). O :root é o elemento mais alto do documento, então as variáveis definidas aqui ficam disponíveis em todo o CSS.*/
+:root {
+
+  font: 18px/145%; /* Define tamanho da fonte (18px), altura da linha (145% — ou seja, ~26px de espaço entre linhas) e a família da fonte */
+  letter-spacing: 0.18px; 
+  color-scheme: light dark; /*Diz ao navegador que o site suporta modo claro e escuro, permitindo que elementos nativos (como inputs e scrollbars) se adaptem automaticamente*/
+  color: var(--text); /*Define cor do texto e do fundo usando variáveis CSS — facilita trocar o tema inteiro num só lugar.*/
+  background: var(--bg); 
+  font-synthesis: none; /*Impede o navegador de "inventar" versões bold ou italic da fonte quando elas não existem no arquivo — evita resultados feios.*/
+  text-rendering: optimizeLegibility; /*Pede ao navegador para priorizar legibilidade na hora de renderizar o texto, ativando kerning e ligaduras.*/
+  -webkit-font-smoothing: antialiased; /*Suavizam as bordas das letras no Mac/iOS, deixando o texto mais fino e nítido (sem isso, o texto pode parecer "gordinho" nesses sistemas)*/
+  -moz-osx-font-smoothing: grayscale; 
+}
+@media (max-width: 1024px) {
+    :root {
+    font-size: 16px;
+  }
+  }
+
+/*É onde você aplica os estilos base à página, incluindo as variáveis que declarou no :root.*/
+body {
+  margin: 0;
+  background-image: url('/back.jpeg');
+  background-size: cover;     /* cobre toda a tela */
+  background-position: center; /* centraliza a imagem */
+  background-repeat: no-repeat; /* não repete */
+  background-attachment: fixed;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  font-family: Courier;
+  font-weight: 600;
+}
+
+
+
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+p {
+  font-family: Courier;
+  font-weight: 550;
+}
+
+
+
+

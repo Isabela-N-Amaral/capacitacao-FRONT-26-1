@@ -1,0 +1,316 @@
+/*Cabeçalho*/
+
+header {
+  display: grid;
+  background-color: rgba(61, 219, 219, 0.322);
+  width: 100%;
+  grid-auto-flow: column;
+}
+
+.nav{
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-items: center;
+  margin: 10px;
+  gap: 15px;
+  font-size: 10px;
+  color: rgb(180, 215, 245);
+}
+
+.logo {
+  width: 80%;
+  height: auto;
+  margin: 5px;
+  justify-self: center;
+}
+
+.links{
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-evenly;
+  margin: 8px;
+  gap: 13px;
+}
+
+@media (min-width: 480px) {
+  h1{
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 770px) {
+  h1{
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1250px) {
+  h1{
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 2560px) {
+  h1{
+    font-size: 35px;
+  }
+
+  .links {
+    justify-items: center;
+    width: 100%;
+  }
+}
+
+/*Fim Cabeçalho*/
+
+/*Parte do sobre e responsividade*/
+.sobre {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 10px;
+  margin: 25px;
+  justify-items: center;
+  width: auto;
+}
+
+@media (min-width: 970px) and (max-width: 1140px) {
+ .sobre {
+    grid-template-columns: 370px 1fr;
+    grid-template-rows: auto auto;
+    align-items: start;
+    gap: 10px;
+  }
+    }
+
+@media (min-width: 1141px) and (max-width: 2560px) {
+  .sobre {
+    max-width: 1200px;
+    margin: 25px auto;
+    grid-template-columns: 370px 1fr;
+  }
+}
+
+  .profile {
+    grid-row: span 2; /* ocupa as 2 linhas na esquerda */
+    width: 50%;
+    height: 100%;
+    margin-top: 0;
+  }
+
+  @media (min-width: 970px) {
+    .profile {
+        width: 100%;
+    }
+  }
+
+.bio{
+  border-radius: 10px;
+  }
+
+  .bio-d{
+    border-radius: 10px;
+  }
+/*Fim da parte do sobre e responsividade*/
+
+/*Inicio imagens*/
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin: 25px;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, 480px);
+    gap: 20px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .cards {
+    grid-template-columns: repeat(2, 750px);
+    grid-template-rows: repeat(2, 610px);
+    justify-content: center;
+  }
+
+  .img-wrapper{
+  justify-content: center;
+}
+}
+
+.card-item {
+  display: grid;
+  text-align: center;
+  grid-auto-flow: column;
+  align-content: space-around;
+  justify-items: center;
+}
+
+@media (min-width: 1024px) {
+  .img-wrapper {
+    height: 100%;
+  }
+}
+
+@media (min-width: 1590px) {
+  .card {
+  grid-template-columns: repeat(2, 750px);
+  }
+}
+/*Fim imagens*/
+
+/*Npc's likes*/
+.npcs {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 10px;
+  margin: 50px;
+  justify-items: center;
+  width: auto;
+  justify-content: center;
+}
+
+.img-npcs {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+}
+
+.placeh {
+  width: 150px;
+  height: 150px;
+  background: #ecb040;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  color: rgb(124, 35, 0);
+   }
+
+  .botao1 {
+  margin: 10px;
+  background-color: rgba(43, 128, 226, 0.589);
+  border-radius: 20px;
+  text-align: center;
+  color: aliceblue;
+  font-family: 'Courier New';
+  font-weight: 550;
+}
+
+.botao2{
+  width: 40px;
+  height: auto;
+  background-color: rgba(14, 4, 105, 0.486);
+  text-align: center;
+  justify-self: right;
+  border-radius: 20px;
+  margin: 5px;
+  color: rgb(226, 237, 248);
+  font-size: 15px;
+}
+
+
+@media (min-width: 640px) {
+  .npcs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .npcs {
+    grid-template-columns: repeat(3, 300px);
+    gap: 20px;
+  }
+
+  .img-npcs {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.placeh {
+  width: 200px;
+  height: 200px;
+  font-size: 20px;
+ }
+}
+
+@media (min-width: 2560px) {
+  .npcs {
+    grid-template-columns: repeat(3, 550px);
+    justify-content: center;
+  }
+
+    .img-npcs {
+  width: 100%;
+  height: 290px;
+  object-fit: contain;
+}
+
+.placeh {
+  width: 290px;
+  height: 290px;
+  font-size: 30px;
+ }
+  
+ .botao1 {
+  font-size: 20px;
+ }
+
+ .botao2{
+  font-size: 20px;
+  width: 60px;
+ }
+
+ }
+
+.img-wrap {
+  
+  border-radius: 8px;
+  display: flex;
+  overflow: hidden;
+  align-items: end;
+  background-color: rgba(102, 191, 243, 0.39);
+  
+  
+}
+/*Fim npc's likes*/
+/*Galeria*/
+.galeria-gatos {
+  text-align: center;
+  font-weight: 600;
+  font-size: 30px;
+  color: rgb(180, 215, 245);
+  margin-top: 20px;
+}
+/*FIm galeria*/
+/*Footer*/
+footer {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  color: rgb(180, 215, 245);
+  background-color: rgba(61, 148, 219, 0.322);
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
